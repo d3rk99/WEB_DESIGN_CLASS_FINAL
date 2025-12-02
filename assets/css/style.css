@@ -253,11 +253,28 @@ nav a:hover, nav a:focus {
 }
 
 .gallery-grid {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-auto-rows: 170px;
+  align-items: stretch;
 }
 
 .gallery-grid .media-placeholder {
-  height: clamp(180px, 34vw, 230px);
+  height: 100%;
+  min-height: 100%;
+}
+
+.gallery-grid .media-placeholder:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: clamp(280px, 48vw, 420px);
+}
+
+.gallery-grid .media-placeholder:nth-child(3n) {
+  grid-row: span 2;
+}
+
+.gallery-grid .media-placeholder:nth-child(4n + 2) {
+  grid-column: span 2;
 }
 
 .profile {
@@ -389,6 +406,20 @@ footer nav ul {
   .navbar {
     flex-direction: column;
     gap: 0.75rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .gallery-grid .media-placeholder,
+  .gallery-grid .media-placeholder:first-child,
+  .gallery-grid .media-placeholder:nth-child(3n),
+  .gallery-grid .media-placeholder:nth-child(4n + 2) {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: clamp(200px, 60vw, 340px);
   }
 }
 
