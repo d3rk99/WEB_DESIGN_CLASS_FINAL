@@ -254,6 +254,7 @@ nav a:hover, nav a:focus {
 
 .gallery-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: row dense;
   align-items: stretch;
 }
 
@@ -271,6 +272,11 @@ nav a:hover, nav a:focus {
 }
 
 .gallery-grid .media-placeholder:last-child:nth-child(even) {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-grid .media-placeholder:last-child:nth-child(odd):not(:first-child) {
   grid-column: 1 / -1;
   aspect-ratio: 16 / 9;
 }
@@ -423,6 +429,11 @@ footer nav ul {
   }
 
   .gallery-grid .media-placeholder:last-child:nth-child(even) {
+    grid-column: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .gallery-grid .media-placeholder:last-child:nth-child(odd):not(:first-child) {
     grid-column: auto;
     aspect-ratio: 1 / 1;
   }
