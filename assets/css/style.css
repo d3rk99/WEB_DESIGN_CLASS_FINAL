@@ -253,6 +253,9 @@ nav a:hover, nav a:focus {
 }
 
 .gallery-grid {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-flow: row dense;
   align-items: stretch;
