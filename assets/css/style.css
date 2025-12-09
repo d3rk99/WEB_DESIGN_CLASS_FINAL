@@ -7,7 +7,7 @@
   --bg: #DDDDDD;
   --white: #fff;
   --shadow: 0 10px 30px rgba(0,0,0,0.08);
-  --placeholder: repeating-linear-gradient(135deg, #f5e8d9 0 14px, #e9d9c3 14px 28px);
+  --placeholder: repeating-linear-gradient(135deg, #DDDDDD 0 14px, #DDDDDD 14px 28px);
 }
 
 * {
