@@ -148,6 +148,42 @@ nav a:hover, nav a:focus {
   color: var(--white);
 }
 
+.hero-slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  background: #60452c;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: heroFade 80s infinite;
+  transform: scale(1.05);
+}
+
+.hero-slide:nth-child(1) { animation-delay: 0s; }
+.hero-slide:nth-child(2) { animation-delay: 8s; }
+.hero-slide:nth-child(3) { animation-delay: 16s; }
+.hero-slide:nth-child(4) { animation-delay: 24s; }
+.hero-slide:nth-child(5) { animation-delay: 32s; }
+.hero-slide:nth-child(6) { animation-delay: 40s; }
+.hero-slide:nth-child(7) { animation-delay: 48s; }
+.hero-slide:nth-child(8) { animation-delay: 56s; }
+.hero-slide:nth-child(9) { animation-delay: 64s; }
+.hero-slide:nth-child(10) { animation-delay: 72s; }
+
+@keyframes heroFade {
+  0% { opacity: 1; transform: scale(1.05); }
+  8% { opacity: 1; transform: scale(1.02); }
+  12% { opacity: 0; transform: scale(1.01); }
+  100% { opacity: 0; transform: scale(1.01); }
+}
+
 .hero::before {
   content: "";
   position: absolute;
