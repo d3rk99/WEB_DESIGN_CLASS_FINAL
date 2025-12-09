@@ -341,7 +341,9 @@ nav a:hover, nav a:focus {
 .feature h3 {
   margin-top: 0;
   margin-bottom: 0.35rem;
-  color: var(--primary);
+  color: var(--primary-dark);
+  letter-spacing: 0.02em;
+  font-weight: 800;
 }
 
 .gallery-grid {
