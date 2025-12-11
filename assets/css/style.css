@@ -591,9 +591,20 @@ textarea {
   border-radius: 50%;
   background: var(--accent);
   color: var(--white);
-  font-weight: 800;
   box-shadow: var(--shadow);
   border: 1px solid rgba(0,0,0,0.06);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(6%) saturate(16%) hue-rotate(229deg) brightness(111%) contrast(101%);
+}
+
+.social-icon.social-icon-google {
+  width: 27px;
+  height: 27px;
 }
 
 .social-pill:hover,
