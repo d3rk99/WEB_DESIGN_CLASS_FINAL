@@ -339,7 +339,6 @@ nav a:hover, nav a:focus {
   background: var(--white);
   border-radius: 14px;
   box-shadow: var(--shadow);
-  border: 1px solid #f0e6dc;
 }
 
 .feature h3 {
